@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import { Robin } from 'robin.io-js'
 import 'robinapp-vue/dist/style.css'
 export default {
   name: 'App',
@@ -30,12 +29,12 @@ export default {
     return {
       loading: true,
       apiKey: 'NT-rfPsrKRZzDELEOqkdtylzSwIDQXbPYTVxjpq',
-      userToken: '',
+      userToken: 'IdpOUFNKJFPkkCypFJgSOfDN',
       users: [
-        {display_name:"Favour Felix", username:"favour", user_token:""},
-        {display_name:"Ayo Onasanya", username:"ayo", user_token:""},
-        {display_name:"Temitope Akinlabi", username:"tope", user_token:""},
-        {display_name:"Techstars Lagos", username:"techstars", user_token:""}
+        {display_name:"Favour Felix", username:"favour", user_token:"IdpOUFNKJFPkkCypFJgSOfDN"},
+        {display_name:"Ayo Onasanya", username:"ayo", user_token:"OZcqJgxJOvAGyCNCeyxpdSst"},
+        {display_name:"Temitope Akinlabi", username:"tope", user_token:"bvyVhnrmCbQDxnCvqcXvkejG"},
+        {display_name:"Techstars Lagos", username:"techstars", user_token:"aytoeAtJVyfWukiPmwaPuGMj"}
       ],
       keys: {
         userToken: 'user_token',
@@ -43,16 +42,6 @@ export default {
       },
       username: 'favour',
     }
-  },
-  // Code to create user token
-  async created () {
-    const robin = new Robin(this.apiKey, true)
-    for (const user of this.users) {
-      const tokenPromise = await robin.createUserToken(user)
-      user.user_token = await tokenPromise.data.user_token
-    }
-    this.userToken = this.users[0].user_token
-    this.loading = false
   }
 }
 </script>

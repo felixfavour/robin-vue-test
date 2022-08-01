@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "robin.io-js": "^0.3.6",
     "robinapp-vue": "^0.0.4",
     "vue": "^2.7.8"
   },
