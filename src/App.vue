@@ -4,7 +4,7 @@
   <div v-if="loading" class="loading-screen">
     <h1> Who are you?</h1>
     <div class="button-flex">
-      <button v-for="user in users" :key="user.user_token" @click="userToken = user.user_token; loading = false">
+      <button v-for="(user, index) in users" :key="index + user.user_token" @click="userToken = user.user_token; loading = false">
         {{ user.display_name }}
       </button>
     </div>
@@ -23,7 +23,7 @@
 
 <script>
 import { Robin } from 'robin.io-js'
-import 'robinapp-vue/dist/style.css'
+import 'robin-vue/dist/style.css'
 export default {
   name: 'App',
   data () {
@@ -51,8 +51,8 @@ export default {
       const tokenPromise = await robin.createUserToken(user)
       user.user_token = await tokenPromise.data.user_token
     }
-    this.userToken = this.users[0].user_token
-    this.loading = false
+    // this.userToken = this.users[0].user_token
+    // this.loading = false
   }
 }
 </script>
