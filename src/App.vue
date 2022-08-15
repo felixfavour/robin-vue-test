@@ -23,7 +23,7 @@
 
 <script>
 import { Robin } from 'robin.io-js'
-import 'robinapp-vue/dist/style.css'
+import 'robin-vue/dist/style.css'
 export default {
   name: 'App',
   data () {
