@@ -10,7 +10,8 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "robin-vue": "^0.0.2",
-    "vue": "^2.7.8"
+    "vue": "^2.7.8",
+    "robin.io-js": "0.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
