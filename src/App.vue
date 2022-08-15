@@ -4,7 +4,7 @@
   <div v-if="loading" class="loading-screen">
     <h1> Who are you?</h1>
     <div class="button-flex">
-      <button v-for="user in users" :key="user.user_token" @click="userToken = user.user_token; loading = false">
+      <button v-for="(user, index) in users" :key="index + user.user_token" @click="userToken = user.user_token; loading = false">
         {{ user.display_name }}
       </button>
     </div>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import 'robinapp-vue/dist/style.css'
+import 'robin-vue/dist/style.css'
 export default {
   name: 'App',
   data () {
@@ -31,10 +31,10 @@ export default {
       apiKey: 'NT-rfPsrKRZzDELEOqkdtylzSwIDQXbPYTVxjpq',
       userToken: 'IdpOUFNKJFPkkCypFJgSOfDN',
       users: [
-        {display_name:"Favour Felix", username:"favour", user_token:"IdpOUFNKJFPkkCypFJgSOfDN"},
-        {display_name:"Ayo Onasanya", username:"ayo", user_token:"OZcqJgxJOvAGyCNCeyxpdSst"},
-        {display_name:"Temitope Akinlabi", username:"tope", user_token:"bvyVhnrmCbQDxnCvqcXvkejG"},
-        {display_name:"Techstars Lagos", username:"techstars", user_token:"aytoeAtJVyfWukiPmwaPuGMj"}
+        {display_name:"Favour Felix", username:"favour", user_token:"TzoHlzMWPEoNryHDjWKriZKP"},
+        {display_name:"Ayo Onasanya", username:"ayo", user_token:"OrCAIzicycBCBlgzzKjyPBFt"},
+        {display_name:"Temitope Akinlabi", username:"tope", user_token:"FtIthzBmpCkKbvIHMBWKbhiQ"},
+        {display_name:"Techstars Lagos", username:"techstars", user_token:"IoqeRSUquhhSVGoTMoYaVJew"}
       ],
       keys: {
         userToken: 'user_token',
