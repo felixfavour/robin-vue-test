@@ -34,7 +34,7 @@ export default {
         {display_name:"Favour Felix", username:"favour", user_token:"TzoHlzMWPEoNryHDjWKriZKP"},
         {display_name:"Ayo Onasanya", username:"ayo", user_token:"OrCAIzicycBCBlgzzKjyPBFt"},
         {display_name:"Temitope Akinlabi", username:"tope", user_token:"FtIthzBmpCkKbvIHMBWKbhiQ"},
-        {display_name:"Techstars Lagos", username:"techstars", user_token:"IoqeRSUquhhSVGoTMoYaVJew"}
+        {display_name:"Precious Ogar", username:"precious", user_token:"IoqeRSUquhhSVGoTMoYaVJew"}
       ],
       keys: {
         userToken: 'user_token',
